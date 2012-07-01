@@ -2,27 +2,25 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:h="http://java.sun.com/jsf/html"
-   xmlns:ui="http://java.sun.com/jsf/facelets">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
 
-  <h:head>
-    <title>
+<h:head>
+	<title></title>
+	<link type="text/css" rel="stylesheet" href="css/styles.css" />
+</h:head>
 
-    </title> 
-    <link type="text/css" rel="stylesheet" href="css/styles.css" />	 
-  </h:head>
-  
-  <h:body>  
-       
-<h:form>
-<p>Name: </p><h:inputText value="#{helloBean.name}"></h:inputText>
+<h:body>
 
-<h:commandButton action="#{helloBean.sayHello}"/>
-</h:form>    
+	<h:form>
+		<p>Name:</p>
+		<h:inputText value="#{helloBean.name}"></h:inputText>
 
-<h:panelGroup displayed="#{helloBean.name}">
-<p>Hello #{helloBean.name}</p>
-</h:panelGroup>
+		<h:commandButton action="#{helloBean.sayHello}" value="Submit"/>
+		<p><h:outputText rendered="#{!empty helloBean.name}" value="Hello #{helloBean.name}"/></p>
+	</h:form>
+
+	
 
 </h:body>
 </html>

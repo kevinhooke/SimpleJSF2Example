@@ -14,7 +14,7 @@ public class HelloBean {
 	
 	public String sayHello()
 	{
-		return this.name;
+		return "hello";
 	}
 	
 	public String getName() {
