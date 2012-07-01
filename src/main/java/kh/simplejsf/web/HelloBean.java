@@ -2,6 +2,11 @@ package kh.simplejsf.web;
 
 import javax.faces.bean.ManagedBean;
 
+/**
+ * Simple JSF ManagedBean.
+ * 
+ * @author Kevin Hooke
+ */
 @ManagedBean
 public class HelloBean {
 
