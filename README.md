@@ -1,6 +1,6 @@
-#Simple JSF2 Hello World Webapp
+# Simple JSF2 Hello World Webapp
 
-##Why?
+## Why?
 Sometimes you need a test app that's nothing more than the simplest 
 possible app to use as either:
 
@@ -11,10 +11,16 @@ other frameworks.
 
 If you remember struts-blank.war from back in the day then this is the same idea.
 
-##What is this?
+## What is this?
 This is a simplest case webapp using JSF2 that meets the above needs.
 
 It doesn't have any database dependencies, because it's ...simple.
 
-##What Version of JSF is it using?
-2.1.10
+## What Version of JSF is it using?
+2.3
+
+## How to build/run
+
+- mvn clean package
+- docker build . -t simplejsf2-tomcat  
+- docker run -p 8080:8080 simplejsf2-tomcat
