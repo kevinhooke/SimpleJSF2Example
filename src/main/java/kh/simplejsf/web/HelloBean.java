@@ -1,6 +1,8 @@
 package kh.simplejsf.web;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import java.io.Serializable;
 
 /**
  * Simple JSF ManagedBean.
@@ -8,7 +10,8 @@ import javax.faces.bean.ManagedBean;
  * @author Kevin Hooke
  */
 @ManagedBean
-public class HelloBean {
+@SessionScoped
+public class HelloBean implements Serializable {
 
 	private String name;
 
