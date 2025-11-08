@@ -24,3 +24,16 @@ It doesn't have any database dependencies, because it's ...simple.
 - mvn clean package
 - docker build . -t simplejsf2-tomcat  
 - docker run -p 8080:8080 simplejsf2-tomcat
+- Open browser at http://localhost:8080/simplejsf
+
+Or
+
+- docker compose up
+
+## Tomcat session persistence
+
+The Dockerfile includes an updated Tomcat context.xml that enables
+HTTP Session persistence using FileStore, and the test WebBean is updated to 
+add @SessionManaged. If you Ctrl-C the running Container and then restart it
+with `docker compose up` again, the session state is reloaded - you can test this with
+/simplejsf/hello.xhtml.
